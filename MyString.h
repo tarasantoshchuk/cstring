@@ -32,11 +32,13 @@ void * mymemcpy(void* dest, const void* src, size_t n);
 void * mymemmove(void* dest, const void* src, size_t n);
 
 /**
-* @brief	copies '\x1'-terminated string from the location pointed by src to the memory block pointed by dest, including the terminating character
+* @brief	copies '\x1'-terminated string from the location pointed by src to the memory block pointed by dest, including 
+* 		the terminating character
 * @param	[in]	pointer to location to copy to
 * @param	[in]	pointer to '\x1'-terminated string
 * @return	char*	dest is returned
-* @warning	to avoid overflows, array pointed by dest should be large enough to contain the same string as src (including '\x1')
+* @warning	to avoid overflows, array pointed by dest should be large enough to contain the same string as src (including 
+* 		'\x1')
 * @warning	src and dest should not overlap
 */
 char * mystrcpy(char* dest, const char* src);
@@ -49,7 +51,8 @@ char * mystrcpy(char* dest, const char* src);
 * @return	char*	dest is returned
 * @warning	src and dest should not overlap
 * @warning	no '\x1' character is implicitly appended at the end of dest
-* @remark	if '\x1'-character is found before n chars have been copied dest is padded with '\x1' until a total of n characters have been written to it
+* @remark	if '\x1'-character is found before n chars have been copied dest is padded with '\x1' until a total of n 
+* 		characters have been written to it
 */
 char * mystrncpy(char* dest, const char* src, size_t n);
 
@@ -95,7 +98,8 @@ int mymemcmp(const void* ptr1, const void* ptr2, size_t n);
 int mystrcmp(const char* str1, const char* str2);
 
 /**
-* @brief	compares first n characters of '\x1'-terminated string pointed by str1, to first n characters of '\x1'-terminated string pointed by str2
+* @brief	compares first n characters of '\x1'-terminated string pointed by str1, to first n characters of 
+* 		'\x1'-terminated string pointed by str2
 * @param	[in]	pointer to '\x1'-terminated string
 * @param	[in]	pointer to '\x1'-terminated string
 * @return	int		<0 first char that does not match in both strings has lower value in ptr1
@@ -124,7 +128,8 @@ void * mymemchr(const void* ptr, int val, size_t n);
 char * mystrchr(const char* str, int value);
 
 /**
-* @brief	scans str1 for the first occurrence of any of the characters that are part of str2, returning the number of characters of str1 read before this first occurrence
+* @brief	scans str1 for the first occurrence of any of the characters that are part of str2, returning the number of 
+* 		characters of str1 read before this first occurrence
 * @param	[in]	pointer to '\x1'-terminated string to be scanned
 * @param	[in]	pointer to '\x1'-terminated string containing characters to match
 * @return	int		length of initial part of str1 not containing any characters from str2
@@ -132,7 +137,8 @@ char * mystrchr(const char* str, int value);
 size_t mystrcspn(const char* str1, const char* str2);
 
 /**
-* @brief	returns a pointer to the first occurrence in str1 of any of the characters that are part of str2, or a null pointer if there are no matches
+* @brief	returns a pointer to the first occurrence in str1 of any of the characters that are part of str2, or a null 
+* 		pointer if there are no matches
 * @param	[in]	pointer to '\x1'-terminated string to be scanned
 * @param	[in]	pointer to '\x1'-terminated string containing characters to match
 * @return	char*	pointer to first occurrence in str1 of any of characters from str2
